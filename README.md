@@ -4,7 +4,7 @@ Pietro Romano
 
 # Introducción
 Este documento proporciona un resumen de enfoque de arquitectura basada en la información proporcionada para ete ejercicio.
-El diagrama de secuencia se encuenta a continuación:
+El diagrama de secuencia inicial se encuentra a continuación:
 ![secuencia](./docs/imgs/sequence.gif "secuencia")
 
 
@@ -12,7 +12,7 @@ El diagrama de secuencia se encuenta a continuación:
 La estrategia general en cuanto a infraestructura se basa en el [Azure API Management landing zone accelerator](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function), como se muestra a continuación:
 ![Seguridad](./docs/imgs/turing-challenge-lz-landing-zone.drawio.png "Seguridad")
 Los componentes clave de la arquitectura incluyen:
-- **Application Gateway** actaua como "Web Application Firewall": proporciona balanceo de carga a nivel 7, SSL offload y otras capacidades. Para protección DDoS, se recomiendos proteger el VNet con [DDoS Network Protection](https://learn.microsoft.com/en-us/azure/application-gateway/tutorial-protect-application-gateway-ddos) (no s)
+- **Application Gateway** actua como "Web Application Firewall": proporciona balanceo de carga a nivel 7, SSL offload y otras capacidades. Para protección DDoS, se recomienda proteger el VNet con [DDoS Network Protection](https://learn.microsoft.com/en-us/azure/application-gateway/tutorial-protect-application-gateway-ddos)
 - **API Management** permite cuotas y otras políticas. 
 - **Azure Functions**: Se propone usar [Durable Functions](https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview?) para modelar el procesamiento. Las APIs están hosteados en Azure Functions y se mantienen internas, accceibles solo por "Private Endpoints". App Gateway requiere certificados PFX para terminación SSL. Azure functions permiten escalar automáticamente, se debe analizar qué tipo de hosting plan sea el más adecuado, por ejemplo el [Premium Plan](https://learn.microsoft.com/en-us/azure/azure-functions/functions-premium-plan).
 - **Log Analytics** de **Azure Monitor** permite editar y ejecutar consultas de registro con datos de los registros de Azure Monitor, opcionalmente desde Azure Portal.
