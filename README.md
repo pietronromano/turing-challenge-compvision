@@ -10,7 +10,7 @@ El diagrama de secuencia se encuenta a continuación:
 
 # Infraestructura
 La estrategia general en cuanto a infraestructura se basa en el [Azure API Management landing zone accelerator](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function), como se muestra a continuación:
-![Seguridad](./docs/imgs/app-gateway-internal-api-management-function.png "Seguridad")
+![Seguridad](./docs/imgs/turing-challenge-lz-landing-zone.drawio.png "Seguridad")
 Los componentes clave de la arquitectura incluyen:
 - **Application Gateway** actaua como "Web Application Firewall": proporciona balanceo de carga a nivel 7, SSL offload y otras capacidades. Para protección DDoS, se recomiendos proteger el VNet con [DDoS Network Protection](https://learn.microsoft.com/en-us/azure/application-gateway/tutorial-protect-application-gateway-ddos) (no s)
 - **API Management** permite cuotas y otras políticas. 
