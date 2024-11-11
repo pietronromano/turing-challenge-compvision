@@ -1,0 +1,43 @@
+{
+  "masterKey": {
+    "name": "master",
+    "value": "IfkfOoVUkgrhqpFc7o_KW4-ntM1Uzish6GuoM2rTC2HVAzFuWsiVhw==",
+    "encrypted": false
+  },
+  "functionKeys": [
+    {
+      "name": "default",
+      "value": "VcFfSiDj5qsIjyY-X5AYhJ3TURurXgBwf-dWYtbXYeDiAzFuE6o_uA==",
+      "encrypted": false
+    }
+  ],
+  "systemKeys": [],
+  "hostName": "localhost:7071",
+  "instanceId": "0000000000000000000000002E6B5062",
+  "source": "runtime",
+  "decryptionKeyId": ""
+}{
+  "masterKey": {
+    "name": "master",
+    "value": "IfkfOoVUkgrhqpFc7o_KW4-ntM1Uzish6GuoM2rTC2HVAzFuWsiVhw==",
+    "encrypted": false
+  },
+  "functionKeys": [
+    {
+      "name": "default",
+      "value": "VcFfSiDj5qsIjyY-X5AYhJ3TURurXgBwf-dWYtbXYeDiAzFuE6o_uA==",
+      "encrypted": false
+    }
+  ],
+  "systemKeys": [
+    {
+      "name": "durabletask_extension",
+      "value": "7S4wpDz63hXR66HA2YeE9mR5cm01fnhLc13Nd7gWPrYyAzFu5WyUKA==",
+      "encrypted": false
+    }
+  ],
+  "hostName": "localhost:7071",
+  "instanceId": "0000000000000000000000002E6B5062",
+  "source": "runtime",
+  "decryptionKeyId": ""
+}{}{"TaskHubName":"TestHubName","CreatedAt":"2024-11-11T19:32:01.853907Z","PartitionCount":4}{"TaskHubName":"TestHubName","CreatedAt":"2024-11-11T19:32:01.853907Z","PartitionCount":4}{"PartitionId":"testhubname-control-03","Owner":null,"Token":null,"Epoch":0}{"PartitionId":"testhubname-control-00","Owner":null,"Token":null,"Epoch":0}{"OwnerId":"811c9dc5-0000-0000-0000-000000000000","DesiredSwapId":null}{"PartitionId":"testhubname-control-00","Owner":"BOOK-BQIN7V1EDR","Token":"d52b615b-f199-4a4c-a8be-734a3ae0259e","Epoch":1}{"PartitionId":"testhubname-control-01","Owner":"BOOK-BQIN7V1EDR","Token":"df6967bc-18a1-4ba8-b3c6-1acd634c8fe2","Epoch":1}{"PartitionId":"testhubname-control-02","Owner":"BOOK-BQIN7V1EDR","Token":"e522ba62-eec2-46eb-bae5-ea3503e3a518","Epoch":1}{"PartitionId":"testhubname-control-03","Owner":"BOOK-BQIN7V1EDR","Token":"42d4ac9f-2700-42d8-adc6-d38a91cdcae6","Epoch":1}{"PartitionId":"testhubname-control-00","Owner":"BOOK-BQIN7V1EDR","Token":"fe3e7e46-f35b-4937-94df-f84f4ce8fd93","Epoch":1}{"PartitionId":"testhubname-control-01","Owner":"BOOK-BQIN7V1EDR","Token":"6d62a96e-f20b-4268-afeb-aa4eb546e1f3","Epoch":1}{"PartitionId":"testhubname-control-02","Owner":"BOOK-BQIN7V1EDR","Token":"2f2303da-94b2-4718-b737-3905ab6517e9","Epoch":1}{"PartitionId":"testhubname-control-03","Owner":"BOOK-BQIN7V1EDR","Token":"2e1719b7-2fb7-4bd1-98a0-f29fada2050a","Epoch":1}
