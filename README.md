@@ -3,7 +3,7 @@
 Pietro Romano
 
 # Introducción
-Este documento proporciona un resumen de enfoque de arquitectura basada en la información proporcionada para ete ejercicio.
+Este documento proporciona un resumen de enfoque de arquitectura basada en la información proporcionada para este ejercicio.
 El diagrama de secuencia inicial se encuentra a continuación:
 ![secuencia](./docs/imgs/sequence.gif "secuencia")
 
@@ -32,7 +32,7 @@ El flujo a alto nivel se muestra a continuación:
 
 # Despliegue Continuo:
 El un pipeline de CI/CD utilizará agentes Azure DevOps para la aplicación .NET., en un subnet privado para mayor seguridad.
-Se recomienda el uso de herramientas de análisis de código como Mend Bolt, Sonar Cube etc para asegurar la seguridad del código
+Se recomienda el uso de herramientas de análisis de código como Mend Bolt, Sonar Cube etc. para asegurar la seguridad del código
 
 # Costes:
 Para la estimación de costes, se  han contado con las cifras de unas 2M de peticiones al año. Se h a realizado una estimación muy aproximada de unas 5.500€ mensuales. Ver la hoja [ExportedEstimate](./docs/ExportedEstimate.xlsx "") para más detalles.
@@ -44,3 +44,7 @@ La cifra exacta dependerá de muchos factores:
 
 Para optimizar costes, debe haber reglas de autoscale tanto de scale-out como scale-in. También se debe considerar el uso de Reserved Instances una vez conocidas los requisitos reales.
   
+# Próximos Pasos
+Se recomienda:
+- iterar sobre el diseño e implementar un prototipo con los componentes principales. 
+- También profundizar en los requisitos "no funcionales" - un ejemplo se encuentra en la página [Quality Requirements](./docs/quality_requirements.md).
