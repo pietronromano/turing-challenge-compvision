@@ -114,32 +114,41 @@
     </mxGraphModel>
   </diagram>
   <diagram id="NBLBT7EyQ6ONWJmHxgsa" name="landing-zone">
-    <mxGraphModel dx="1369" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1461" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="YAJbFqamvFly0Rf3_4Ha-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://learn.microsoft.com/en-us/azure/architecture/example-scenario/integration/media/app-gateway-internal-api-management-function.png;" vertex="1" parent="1">
+        <mxCell id="YAJbFqamvFly0Rf3_4Ha-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://learn.microsoft.com/en-us/azure/architecture/example-scenario/integration/media/app-gateway-internal-api-management-function.png;" parent="1" vertex="1">
           <mxGeometry x="40" y="70" width="1200" height="906" as="geometry" />
         </mxCell>
-        <mxCell id="ynNbGweWrczP15TrCoQF-1" value="DDoS&lt;div&gt;Network Protection&lt;/div&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/DDoS_Protection_Plans.svg;" vertex="1" parent="1">
+        <mxCell id="ynNbGweWrczP15TrCoQF-1" value="DDoS&lt;div&gt;Network Protection&lt;/div&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/DDoS_Protection_Plans.svg;" parent="1" vertex="1">
           <mxGeometry x="320" y="420" width="50" height="60.71" as="geometry" />
         </mxCell>
-        <mxCell id="ynNbGweWrczP15TrCoQF-2" value="&lt;div&gt;Azure&lt;/div&gt;Cosmos DB" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/Azure_Cosmos_DB.svg;" vertex="1" parent="1">
+        <mxCell id="ynNbGweWrczP15TrCoQF-2" value="&lt;div&gt;Azure&lt;/div&gt;Cosmos DB" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/Azure_Cosmos_DB.svg;" parent="1" vertex="1">
           <mxGeometry x="998" y="679" width="68" height="68" as="geometry" />
         </mxCell>
-        <mxCell id="ynNbGweWrczP15TrCoQF-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.825;exitY=0.563;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="YAJbFqamvFly0Rf3_4Ha-1" target="ynNbGweWrczP15TrCoQF-2">
+        <mxCell id="ynNbGweWrczP15TrCoQF-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.825;exitY=0.563;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="YAJbFqamvFly0Rf3_4Ha-1" target="ynNbGweWrczP15TrCoQF-2" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="995" y="580" as="sourcePoint" />
             <mxPoint x="1024" y="680" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ynNbGweWrczP15TrCoQF-5" value="Azure&lt;div&gt;Service&lt;/div&gt;&lt;div&gt;Bus&lt;/div&gt;" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Service_Bus.svg;" vertex="1" parent="1">
+        <mxCell id="ynNbGweWrczP15TrCoQF-5" value="Azure&lt;div&gt;Service&lt;/div&gt;&lt;div&gt;Bus&lt;/div&gt;" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Service_Bus.svg;" parent="1" vertex="1">
           <mxGeometry x="930" y="679" width="50" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ynNbGweWrczP15TrCoQF-6" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.825;exitY=0.563;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+        <mxCell id="ynNbGweWrczP15TrCoQF-6" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.825;exitY=0.563;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="954.5" y="580" as="sourcePoint" />
             <mxPoint x="955.5" y="679" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3hixby6uFD7fqa5ZEcdS-1" value="Custom Vision&amp;nbsp;&lt;div&gt;Lawn Model&lt;/div&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/ai_machine_learning/Computer_Vision.svg;" vertex="1" parent="1">
+          <mxGeometry x="840" y="682.5" width="61" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="3hixby6uFD7fqa5ZEcdS-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.825;exitY=0.563;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.45;entryY=-0.07;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="3hixby6uFD7fqa5ZEcdS-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="930" y="583.5" as="sourcePoint" />
+            <mxPoint x="931" y="682.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
