@@ -29,7 +29,8 @@ Para el API y el procesamiento de las peticiones se han considerado varias opcio
 - Web Apps
 - Contenedores: usando Azure container Instances o bien Azure Kubernetes Service
 - Azure Functions
-Cualquiera de las opciones consideradas anteriormente podrían ser válidas y funcionarían. En este caso, se ha elegido usar Azure Durable Functions, aprovechando sus capacidades para orchestrar el flujo.
+  
+Cualquiera de las opciones consideradas anteriormente podrían ser válidas y funcionarían. En este caso, se ha elegido usar **Azure Durable Functions**, aprovechando sus capacidades para orchestrar el flujo.
 Dado que el procesamiento debe poder escarlarse mucho (hasta 50/s) y puede tardar unos 20 segundos, la petición inicial a la API solo devuelve un ID de petición inicialmente. 
 El usuario del API debe también proporcionar un webhook URL al cual el servicio llamará con los resultados finales. La petición se añade a una cola de Azure Service Bus y es recogida por la función de procesamiento.
 El flujo a alto nivel se muestra a continuación:
