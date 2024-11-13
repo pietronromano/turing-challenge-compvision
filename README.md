@@ -50,7 +50,7 @@ Hat varios métodos de mantener información secreta en las pipelines:
 Publique paquetes para fuentes y compártalos en equipos
 
 # Costes:
-Para la estimación de costes, se  han contado con las cifras de unas 2M de peticiones al año. Se h a realizado una estimación muy aproximada de unas 5.500€ mensuales. Ver la hoja [ExportedEstimate](./docs/ExportedEstimate.xlsx "") para más detalles.
+Para la estimación de costes, se  han contado con las cifras de unas 2M de peticiones al año. Se ha realizado una estimación muy aproximada de unas 5.500€ mensuales. Ver la hoja [ExportedEstimate](./docs/ExportedEstimate.xlsx "") para más detalles.
 La cifra exacta dependerá de muchos factores:
 - Número y tamaño de instancias para Azure Functions (cores, RAM, storage)
 - RUs requeridos para Cosmos DB: consultas, inserciones, si se decide almacenar el JSON de las peticiones ahí o en blob storate
