@@ -54,7 +54,7 @@ Para la estimación de costes, se  han contado con las cifras de unas 2M de peti
 La cifra exacta dependerá de muchos factores:
 - Número y tamaño de instancias para Azure Functions (cores, RAM, storage)
 - RUs requeridos para Cosmos DB: consultas, inserciones, si se decide almacenar el JSON de las peticiones ahí o en blob storate
-- Almacenamiento de Blobs: tamaño y patrones de uso. Para acceso a los blobs, se recomienda autentción RBAC.
+- Almacenamiento de Blobs: tamaño y patrones de uso. Para acceso a los blobs, se recomienda autenticación RBAC.
 - Service Bus: número de mensajes (aunque no se espera que estos coste sean muy altos)
 
 Para optimizar costes, debe haber reglas de autoscale tanto de scale-out como scale-in. También se debe considerar el uso de Reserved Instances una vez conocidas los requisitos reales.
