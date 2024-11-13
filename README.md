@@ -38,7 +38,7 @@ Hat varios métodos de mantener información secreta en las pipelines:
 - Si son necesarias variables secretas como contraseñas, identificadores y otros datos de identificación, se recomienda establecer variables secretas con **Azure Key Vault**.
 - Los **archivos seguros** son una manera de almacenar archivos que puede usar en canalizaciones sin tener que incluirlos en el repositorio.
 - GitHub [escanea repositorios](https://docs.github.com/es/code-security/secret-scanning/introduction/about-secret-scanning) para encontrar tipos conocidos de secretos.
-- Para reutilizar código entre equipos y dministrar dependencias, se recomienda usar [Azure Artifacts](https://learn.microsoft.com/es-es/azure/devops/artifacts/start-using-azure-artifacts?view=azure-devops&tabs=nuget%2Cnugetserver).
+- Para may eficiencia y reutilizar código entre equipos y administrar dependencias, se recomienda usar [Azure Artifacts](https://learn.microsoft.com/es-es/azure/devops/artifacts/start-using-azure-artifacts?view=azure-devops&tabs=nuget%2Cnugetserver).
 
 Publique paquetes para fuentes y compártalos en equipos
 
