@@ -32,15 +32,20 @@ El flujo a alto nivel se muestra a continuación:
 
 # Despliegue Continuo:
 El un pipeline de CI/CD utilizará agentes Azure DevOps para la aplicación .NET., en un subnet privado para mayor seguridad.
-Se recomienda el uso de herramientas de análisis de código como Mend Bolt, Sonar Cube etc. para asegurar la seguridad del código
+Se recomienda el uso de herramientas de análisis de código como Mend Bolt, Sonar Cube etc. para asegurar la seguridad del código.
+Para acceso a los reposistorios, se recomienda usar Git Credential Managers, utilizandolas mismas credenciales que para el portal de Azure DevOps Services, y soportan autenticación multi-factor.
+Hat varios métodos de mantener información secreta en las pipelines:
+- Si son necesarias variables secretas como contraseñas, identificadores y otros datos de identificación, se recomienda establecer variables secretas con **Azure Key Vault**.
+- Los **archivos seguros** son una manera de almacenar archivos que puede usar en canalizaciones sin tener que incluirlos en el repositorio.
+- GitHub [escanea repositorios](https://docs.github.com/es/code-security/secret-scanning/introduction/about-secret-scanning) para encontrar tipos conocidos de secretos.
 
 # Costes:
 Para la estimación de costes, se  han contado con las cifras de unas 2M de peticiones al año. Se h a realizado una estimación muy aproximada de unas 5.500€ mensuales. Ver la hoja [ExportedEstimate](./docs/ExportedEstimate.xlsx "") para más detalles.
 La cifra exacta dependerá de muchos factores:
 - Número y tamaño de instancias para Azure Functions (cores, RAM, storage)
-- RUs requeridos para Cosmos DB
-- Almacenamiento de Blobs
-- Service Bus (aunque no se espera que sea decisivo)
+- RUs requeridos para Cosmos DB: consultas, inserciones etc.
+- Almacenamiento de Blobs: tamaño y patrones de uso
+- Service Bus: número de mensajes (aunque no se espera que sea decisivo)
 
 Para optimizar costes, debe haber reglas de autoscale tanto de scale-out como scale-in. También se debe considerar el uso de Reserved Instances una vez conocidas los requisitos reales.
   
