@@ -29,8 +29,9 @@ Para el API y el procesamiento de las peticiones se han considerado varias opcio
 - Web Apps
 - Contenedores: usando Azure container Instances o bien Azure Kubernetes Service
 - Azure Functions
-Cualquiera de las opciones consideradas anteriormente podrían ser válidas y funcionarían. En este caso, se ha elegido usar Azure Durable Functions, aprovechano sus capacidades para orchestrar el flujo.
-Dado que el procesamiento debe poder escarlarse mucho (hasta 50 / q) y puede tardar unos 20 segundos, la petición inicial a la API solo devuelve un ID de petición inicialmente. El usuario del API debe también proporcionar un webhook URL al cual el servicio llamará con los resultados finales. La petición se añade a una cola de Azure Service Bus y es recogida por la función de procesamiento.
+Cualquiera de las opciones consideradas anteriormente podrían ser válidas y funcionarían. En este caso, se ha elegido usar Azure Durable Functions, aprovechando sus capacidades para orchestrar el flujo.
+Dado que el procesamiento debe poder escarlarse mucho (hasta 50/s) y puede tardar unos 20 segundos, la petición inicial a la API solo devuelve un ID de petición inicialmente. 
+El usuario del API debe también proporcionar un webhook URL al cual el servicio llamará con los resultados finales. La petición se añade a una cola de Azure Service Bus y es recogida por la función de procesamiento.
 El flujo a alto nivel se muestra a continuación:
 ![Processing](./docs/imgs/turing-challenge-lz-processing.drawio.png "").
 
@@ -53,7 +54,7 @@ La cifra exacta dependerá de muchos factores:
 - Número y tamaño de instancias para Azure Functions (cores, RAM, storage)
 - RUs requeridos para Cosmos DB: consultas, inserciones, si se decide almacenar el JSON de las peticiones ahí o en blob storate
 - Almacenamiento de Blobs: tamaño y patrones de uso. Para acceso a los blobs, se recomienda autentción RBAC.
-- Service Bus: número de mensajes (aunque no se espera que sea decisivo)
+- Service Bus: número de mensajes (aunque no se espera que estos coste sean muy altos)
 
 Para optimizar costes, debe haber reglas de autoscale tanto de scale-out como scale-in. También se debe considerar el uso de Reserved Instances una vez conocidas los requisitos reales.
   
