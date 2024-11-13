@@ -21,7 +21,7 @@ Los componentes clave de la arquitectura incluyen:
 - **Application Insights** de Azure Monitor ayuda detectar anomalías, diagnosticar problemas y comprender los patrones de uso. Se usará para obtener trazabilidad end-to-end para las peticiones recibidas por ID de petición.
 - **Azure Bastion** proporciona conectividad RDP/SSH segura a las máquinas virtuales de los desarrolladores desde Azure Portal mediante TLS. Con Azure Bastion, las máquinas virtuales ya no requieren una dirección IP pública para conectarse mediante RDP/SSH. Esta arquitectura de referencia usa Azure Bastion para acceder al servidor del agente de DevOps o del ejecutor de GitHub, o al servidor jumpbox de administración.
 - **Azure Key Vault** es un servicio en la nube que almacena y accede de forma segura a los secretos, que van desde claves y contraseñas de API hasta certificados y claves criptográficas. Esta arquitectura de referencia usa Azure Key Vault para almacenar los certificados SSL que usa la instancia de Application Gateway.
-- **Cosmos DB** : se propone como base de datos para los catastros (unos 150M): altamente escalable y flexible en cuanto a esquema. Se podría almacenar el JSON de las peticiones en Cosmos DB oen Blob Storage: son de 5KB a 30KB, dentro de los límites de Cosmos DB: la decisión final dependerá de si hay que realizar consultas sobre los contenidos del JSON o no.
+- **Cosmos DB** : se propone como base de datos para los catastros (unos 150M): altamente escalable y flexible en cuanto a esquema. Se podría almacenar el JSON de las peticiones en Cosmos DB oen Blob Storage: son de 5KB a 30KB, dentro de los límites de Cosmos DB: la decisión final dependerá de si hay que realizar consultas sobre los contenidos del JSON o no, y si se justifica el coste adicional comparado con almacenar los JSONs en Blob Storage.
 
 
 # Procesamiento (Compute)
@@ -53,7 +53,7 @@ Publique paquetes para fuentes y compártalos en equipos
 Para la estimación de costes, se  han contado con las cifras de unas 2M de peticiones al año. Se ha realizado una estimación muy aproximada de unas 5.500€ mensuales. Ver la hoja [ExportedEstimate](./docs/ExportedEstimate.xlsx "") para más detalles.
 La cifra exacta dependerá de muchos factores:
 - Número y tamaño de instancias para Azure Functions (cores, RAM, storage)
-- RUs requeridos para Cosmos DB: consultas, inserciones, si se decide almacenar el JSON de las peticiones ahí o en blob storate
+- RUs requeridos para Cosmos DB: consultas, inserciones, si se decide almacenar el JSON de las peticiones ahí o en blob storage
 - Almacenamiento de Blobs: tamaño y patrones de uso. Para acceso a los blobs, se recomienda autenticación RBAC.
 - Service Bus: número de mensajes (aunque no se espera que estos coste sean muy altos)
 
